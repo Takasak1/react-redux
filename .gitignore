@@ -1,0 +1,4 @@
+/node_modules
+/data
+package-lock.json
+/server/config/keys_dev.js
