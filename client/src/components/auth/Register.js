@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
-
+import axios from 'axios';
 import TextFieldGroup from '../common/TextFieldGroup';
 
 class Register extends Component {
@@ -31,7 +31,10 @@ class Register extends Component {
       password: this.state.password,
       password2: this.state.password2
     };
-    console.log(newUser)
+    
+    axios.post('http://nodedb-takasak1.c9users.io:8080/api/users/register', newUser)
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err.response.data));
   }
   
   render() {
