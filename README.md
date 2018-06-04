@@ -16,3 +16,12 @@ http://www.youtube.com/user/c9ide.
 
 Happy coding!
 The Cloud9 IDE team# react-redux
+
+npm run start --public $C9_HOSTNAME
+
+sudo apt-get install -y mongodb-org
+mkdir data
+npm install mongoose --save
+echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+chmod a+x mongod
+./mongod
