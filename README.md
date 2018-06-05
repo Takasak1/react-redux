@@ -25,3 +25,9 @@ npm install mongoose --save
 echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
 chmod a+x mongod
 ./mongod
+
+mongo
+show dbs
+use databasename
+show collections
+db.tablename.find()
